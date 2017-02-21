@@ -34,8 +34,8 @@ with open("<filename>","rU") as csvfile:	##iterating through the coloumn and app
             for i in range(1,len(lines)):
                 dictionary[lines[0]].append(float(lines[i]))
 
-##iterating through my list of proteins
-with open("PXP_ALL_output.txt","w") as f:
+
+with open("PXP_ALL_output.txt","w") as f:	##iterating through my list of proteins
     for i in range(len(proteins)):
         for j in range(len(proteins)):
             j=j+1
