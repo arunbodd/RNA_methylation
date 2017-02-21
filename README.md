@@ -13,9 +13,7 @@ proteins=[] ##declaring an array
 
 dictionary={} ##declaring a dictionary
 
-##reading the file and adding desired columns into a dictionary
-
-with open("<filename>","rU") as csvfile:
+with open("<filename>","rU") as csvfile:	##reading the file and adding desired columns into a dictionary
     reader=csv.reader(csvfile, delimiter="\t")
     i=0
     j=0
@@ -25,9 +23,9 @@ with open("<filename>","rU") as csvfile:
         if i>1314:
         	break
 
-##iterating through the coloumn and appending it to dictionary
 
-with open("<filename>","rU") as csvfile:
+
+with open("<filename>","rU") as csvfile:	##iterating through the coloumn and appending it to dictionary
     reader=csv.reader(csvfile, delimiter="\t")
     reader.next()
     for lines in reader:
@@ -44,7 +42,7 @@ with open("PXP_ALL_output.txt","w") as f:
             if j>1317:
 		break
 	
-  ##printing the output and calculating spearman correlation for my proteins (key:value) stored in my dictiorary
-    print>>f, str(proteins[i])+"\t"+str(proteins[j])+"\t"+str(scipy.stats.spearmanr(dictionary[proteins[i]],dictionary[proteins[j]])[0])
+ 
+    print>>f, str(proteins[i])+"\t"+str(proteins[j])+"\t"+str(scipy.stats.spearmanr(dictionary[proteins[i]],dictionary[proteins[j]])[0])	 ##printing the output and calculating spearman correlation for my proteins (key:value) stored in my dictiorary
 
 
