@@ -3,13 +3,13 @@ import scipy
 from scipy import stats
 proteins=[]
 dictionary={}
-with open("HPM_gene_level_epxression_matrix_Kim_et_al_052914.csv","rU") as csvfile:
+with open("Example.csv","rU") as csvfile:
 	reader=csv.reader(csvfile, delimiter=",")
 	for lines in reader:
 		i=0
 		dictionary[lines[0]]=[]
 		i=i+1
-with open("HPM_gene_level_epxression_matrix_Kim_et_al_052914.csv","rU") as csvfile:
+with open("Example.csv","rU") as csvfile:
 	reader=csv.reader(csvfile, delimiter=",")
 	reader.next()
 	for lines in reader:
